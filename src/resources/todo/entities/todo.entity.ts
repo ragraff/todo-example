@@ -3,9 +3,12 @@ import {
   Column,
   CreateDateColumn,
   Entity,
+  JoinColumn,
+  ManyToOne,
   PrimaryGeneratedColumn,
   UpdateDateColumn,
 } from 'typeorm';
+import { User } from '../../user/entities/user.entity';
 
 @Entity('todos')
 export class Todo extends BaseEntity {
@@ -26,4 +29,8 @@ export class Todo extends BaseEntity {
 
   @UpdateDateColumn()
   updated_at: string;
+
+  @ManyToOne(() => User, (user) => user.todos)
+  @JoinColumn()
+  user: User;
 }

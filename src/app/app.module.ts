@@ -17,7 +17,7 @@ const getTypeOrmOptions: TypeOrmModuleOptions = {
   autoLoadEntities: true,
   logging: true,
   legacySpatialSupport: false,
-  dropSchema: true,
+  // dropSchema: true,
 };
 
 @Module({

@@ -1,7 +1,7 @@
 import { Module } from '@nestjs/common';
+import { TodoModule } from '../resources/todo/todo.module';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import { TodoModule } from './resources/todo/todo.module';
 
 @Module({
   imports: [TodoModule],

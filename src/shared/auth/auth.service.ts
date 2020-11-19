@@ -1,5 +1,5 @@
 import { Injectable } from '@nestjs/common';
-import { JwtService } from '@nestjs/jwt/dist/jwt.service';
+import { JwtService } from '@nestjs/jwt';
 import { UserNotFoundException } from '../../common/exceptions/user-not-found.exception';
 import { LoginRequestDto } from '../../resources/session/interfaces/login-request.dto';
 import { UserService } from '../../resources/user/user.service';

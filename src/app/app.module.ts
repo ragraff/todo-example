@@ -6,7 +6,6 @@ import { TodoModule } from '../resources/todo/todo.module';
 import { UserModule } from '../resources/user/user.module';
 import { AuthModule } from '../shared/auth/auth.module';
 import { AppController } from './app.controller';
-import { AppService } from './app.service';
 
 const getTypeOrmOptions: TypeOrmModuleOptions = {
   type: 'mysql',
@@ -33,6 +32,6 @@ const getTypeOrmOptions: TypeOrmModuleOptions = {
     TypeOrmModule.forRoot({ ...getTypeOrmOptions }),
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [],
 })
 export class AppModule {}

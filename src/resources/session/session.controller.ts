@@ -25,6 +25,6 @@ export class SessionController {
   @UseInterceptors(AddBearerTokenInterceptor)
   // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
   async login(@Body() loginRequestDto: LoginRequestDto): Promise<any> {
-    return await this.authService.login(loginRequestDto);
+    return this.authService.login(loginRequestDto);
   }
 }

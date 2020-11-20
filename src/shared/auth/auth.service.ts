@@ -12,7 +12,7 @@ export class AuthService {
   ) {}
 
   /**
-   * Logs the user in and returns the access token.
+   * Returns the access token for the authenticated user.
    * @param param0 The user email
    * @param roleName The role for the user
    */
